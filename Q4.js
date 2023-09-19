@@ -5,10 +5,13 @@ let list = [
 ]
 
 let newarr=list.filter((value)=>value.year>2010)
-newarr.forEach((value)=>{
-    value.author=value.author.toUpperCase()
-})
+let result=newarr.map((value)=>(
+    {
+    ...value,
+    author:value.author.toUpperCase()
+    } 
+))
 
 console.log(list)
 
-console.log(newarr)
+console.log(result)
